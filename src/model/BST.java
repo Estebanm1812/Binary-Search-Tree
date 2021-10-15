@@ -3,27 +3,27 @@ package model;
 
 public class BST<T> {
 	
-	//Nodo<T> raiz;
+	Nodo<T> raiz;
 	
 	public BST() {
-		raiz = null;
+
 	}
 	
 	//inorder tree walk
-	public void recorrido_inorder(Nodo x) {
+	public void recorrido_inorder(Nodo<T> x) {
 		
 		if(x != null) {
-			recorrido_inorder(x.izq);
-			System.out.println(x.llave);
-			recorrido_inorder(x.der);
+			recorrido_inorder(x.getIzq());
+			System.out.println(x.getValue());
+			recorrido_inorder(x.getDer());
 			
 		}
 	}
 	
-	public void insetar(int key, Object valor) {
+	public void insetar(T key, T valor) {
 		
-		Nodo n= new Nodo(key);
-		n.valor = valor;
+		Nodo<T> n= new Nodo(key);
+		n.setValue(valor);
 		
 		if(raiz == null) {
 			raiz = n;
@@ -49,7 +49,7 @@ public class BST<T> {
 		}
 		
 	}
-	
+	/*
 	private class Nodo{
 			
 		 public Nodo p; //padre	
@@ -69,6 +69,6 @@ public class BST<T> {
 		 
 			
 	}
-	
+	*/
 
 }

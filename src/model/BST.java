@@ -3,7 +3,7 @@ package model;
 
 public class BST<T> {
 	
-	Nodo<T> raiz;
+	//Nodo<T> raiz;
 	
 	public BST() {
 		raiz = null;
